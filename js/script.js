@@ -13,12 +13,13 @@ do {
   inputUtente = inputUtente.charAt(0).toUpperCase() + inputUtente.slice(1);
 } while (!isNaN(inputUtente));
 
-// 3. inserire il cognome dell'utente nell'array "cognomi"
+// 3. inserire il cognome dell'utente nell'array "cognomi" e ordinamento alfabetico
 cognomi.push(inputUtente);
+cognomi.sort();
 
 // 4. stampa della lista ordinata alfabeticamente
 for (var i = 0; i < cognomi.length; i++) {
-  document.getElementById("lista").innerHTML += "<li>" + cognomi.sort()[i] + "</li>";
+  document.getElementById("lista").innerHTML += "<li>" + cognomi[i] + "</li>";
 }
 
 // 5. scrittura posizione esatta del cognome dell'utente nella Lista
